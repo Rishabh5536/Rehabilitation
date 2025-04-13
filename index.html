@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rehabilitation & Recovery Progress Tracker</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fas fa-heartbeat"></i>
+            <span>RehabTracker</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Dashboard</a></li>
+            <li><a href="pages/progress.html">Progress</a></li>
+            <li><a href="pages/exercises.html">Exercises</a></li>
+            <li><a href="pages/calendar.html">Calendar</a></li>
+            <li><a href="pages/profile.html">Profile</a></li>
+        </ul>
+        <div class="user-profile">
+            <img src="https://via.placeholder.com/40" alt="Profile" class="profile-img">
+            <span class="username">John Doe</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </nav>
+
+    <main>
+        <section id="dashboard" class="dashboard">
+            <div class="welcome-section">
+                <span class="greeting">👋 Welcome back</span>
+                <h1>John's Recovery Dashboard</h1>
+                <p class="date">Today's Date: <span id="current-date"></span></p>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card" style="--animation-order: 1">
+                    <i class="fas fa-walking"></i>
+                    <h3>Daily Steps</h3>
+                    <p class="stat-number">6,543</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 65%"></div>
+                    </div>
+                    <p class="stat-subtitle">Goal: 10,000 steps</p>
+                </div>
+                <div class="stat-card" style="--animation-order: 2">
+                    <i class="fas fa-dumbbell"></i>
+                    <h3>Exercise Minutes</h3>
+                    <p class="stat-number">45</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 75%"></div>
+                    </div>
+                    <p class="stat-subtitle">Goal: 60 minutes</p>
+                </div>
+                <div class="stat-card" style="--animation-order: 3">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Recovery Score</h3>
+                    <p class="stat-number">85%</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 85%"></div>
+                    </div>
+                    <p class="stat-subtitle">Great progress!</p>
+                </div>
+                <div class="stat-card" style="--animation-order: 4">
+                    <i class="fas fa-calendar-check"></i>
+                    <h3>Streak</h3>
+                    <p class="stat-number">12 days</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 90%"></div>
+                    </div>
+                    <p class="stat-subtitle">Keep it up!</p>
+                </div>
+            </div>
+
+            <div class="main-content">
+                <div class="progress-chart">
+                    <div class="chart-header">
+                        <h2>Recovery Progress</h2>
+                        <div class="chart-actions">
+                            <button class="chart-btn active">Week</button>
+                            <button class="chart-btn">Month</button>
+                            <button class="chart-btn">Year</button>
+                        </div>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="progressChart"></canvas>
+                        <div class="chart-tooltip">
+                            <div class="chart-tooltip-title">Recovery Score</div>
+                            <div class="chart-tooltip-value">85%</div>
+                        </div>
+                    </div>
+                    <div class="chart-legend">
+                        <div class="legend-item">
+                            <div class="legend-color" style="background: var(--primary-color)"></div>
+                            <div class="legend-label">Recovery Score</div>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color" style="background: var(--secondary-color)"></div>
+                            <div class="legend-label">Target</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="upcoming-exercises">
+                    <div class="section-header">
+                        <h2>Today's Exercises</h2>
+                        <button class="add-exercise-btn">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                    <div class="exercise-list">
+                        <div class="exercise-item" style="--animation-order: 1">
+                            <div class="exercise-icon">
+                                <i class="fas fa-running"></i>
+                            </div>
+                            <div class="exercise-details">
+                                <h3>Morning Walk</h3>
+                                <p>30 minutes • 2.5 km</p>
+                                <div class="exercise-time">
+                                    <i class="far fa-clock"></i>
+                                    <span>8:00 AM</span>
+                                </div>
+                            </div>
+                            <button class="start-btn">Start</button>
+                        </div>
+                        <div class="exercise-item" style="--animation-order: 2">
+                            <div class="exercise-icon">
+                                <i class="fas fa-dumbbell"></i>
+                            </div>
+                            <div class="exercise-details">
+                                <h3>Strength Training</h3>
+                                <p>45 minutes • Upper Body</p>
+                                <div class="exercise-time">
+                                    <i class="far fa-clock"></i>
+                                    <span>10:30 AM</span>
+                                </div>
+                            </div>
+                            <button class="start-btn">Start</button>
+                        </div>
+                        <div class="exercise-item" style="--animation-order: 3">
+                            <div class="exercise-icon">
+                                <i class="fas fa-yoga"></i>
+                            </div>
+                            <div class="exercise-details">
+                                <h3>Stretching</h3>
+                                <p>15 minutes • Flexibility</p>
+                                <div class="exercise-time">
+                                    <i class="far fa-clock"></i>
+                                    <span>4:00 PM</span>
+                                </div>
+                            </div>
+                            <button class="start-btn">Start</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html> 

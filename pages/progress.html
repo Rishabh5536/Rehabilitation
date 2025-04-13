@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress - Rehabilitation & Recovery Progress Tracker</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fas fa-heartbeat"></i>
+            <span>RehabTracker</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="../index.html">Dashboard</a></li>
+            <li><a href="progress.html" class="active">Progress</a></li>
+            <li><a href="exercises.html">Exercises</a></li>
+            <li><a href="calendar.html">Calendar</a></li>
+            <li><a href="profile.html">Profile</a></li>
+        </ul>
+        <div class="user-profile">
+            <img src="https://via.placeholder.com/40" alt="Profile" class="profile-img">
+            <span class="username">John Doe</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </nav>
+
+    <main>
+        <section class="progress-page">
+            <div class="welcome-section">
+                <h1>Progress Tracking</h1>
+                <p class="date">View your recovery journey</p>
+            </div>
+
+            <div class="progress-filters">
+                <div class="filter-group">
+                    <label>Time Period:</label>
+                    <select id="timeFilter">
+                        <option value="week">Last Week</option>
+                        <option value="month">Last Month</option>
+                        <option value="year">Last Year</option>
+                        <option value="custom">Custom Range</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Metrics:</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" checked> Steps</label>
+                        <label><input type="checkbox" checked> Exercise Minutes</label>
+                        <label><input type="checkbox" checked> Recovery Score</label>
+                        <label><input type="checkbox" checked> Pain Level</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="progress-grid">
+                <div class="progress-card">
+                    <h3>Overall Progress</h3>
+                    <canvas id="overallProgressChart"></canvas>
+                </div>
+                <div class="progress-card">
+                    <h3>Daily Activity</h3>
+                    <canvas id="dailyActivityChart"></canvas>
+                </div>
+                <div class="progress-card">
+                    <h3>Pain Level Trends</h3>
+                    <canvas id="painLevelChart"></canvas>
+                </div>
+                <div class="progress-card">
+                    <h3>Exercise Completion</h3>
+                    <canvas id="exerciseCompletionChart"></canvas>
+                </div>
+            </div>
+
+            <div class="progress-summary">
+                <h2>Progress Summary</h2>
+                <div class="summary-grid">
+                    <div class="summary-card">
+                        <i class="fas fa-arrow-up"></i>
+                        <h4>Improvement Rate</h4>
+                        <p class="summary-value">+15%</p>
+                        <p class="summary-subtitle">vs last month</p>
+                    </div>
+                    <div class="summary-card">
+                        <i class="fas fa-bullseye"></i>
+                        <h4>Goal Achievement</h4>
+                        <p class="summary-value">85%</p>
+                        <p class="summary-subtitle">of monthly goals</p>
+                    </div>
+                    <div class="summary-card">
+                        <i class="fas fa-fire"></i>
+                        <h4>Consistency</h4>
+                        <p class="summary-value">92%</p>
+                        <p class="summary-subtitle">exercise completion</p>
+                    </div>
+                    <div class="summary-card">
+                        <i class="fas fa-smile"></i>
+                        <h4>Well-being Score</h4>
+                        <p class="summary-value">8.5/10</p>
+                        <p class="summary-subtitle">average rating</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../js/progress.js"></script>
+</body>
+</html> 

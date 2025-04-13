@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar - Rehabilitation & Recovery Progress Tracker</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fas fa-heartbeat"></i>
+            <span>RehabTracker</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="../index.html">Dashboard</a></li>
+            <li><a href="progress.html">Progress</a></li>
+            <li><a href="exercises.html">Exercises</a></li>
+            <li><a href="calendar.html" class="active">Calendar</a></li>
+            <li><a href="profile.html">Profile</a></li>
+        </ul>
+        <div class="user-profile">
+            <img src="https://via.placeholder.com/40" alt="Profile" class="profile-img">
+            <span class="username">John Doe</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </nav>
+
+    <main>
+        <section class="calendar-page">
+            <div class="welcome-section">
+                <h1>Exercise Calendar</h1>
+                <p class="date">Plan and track your rehabilitation schedule</p>
+            </div>
+
+            <div class="calendar-container">
+                <div class="calendar-header">
+                    <div class="calendar-nav">
+                        <button class="nav-btn" id="prevMonth">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <h2 id="currentMonth">September 2023</h2>
+                        <button class="nav-btn" id="nextMonth">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                    <div class="calendar-views">
+                        <button class="view-btn active" data-view="month">Month</button>
+                        <button class="view-btn" data-view="week">Week</button>
+                        <button class="view-btn" data-view="day">Day</button>
+                    </div>
+                </div>
+
+                <div class="calendar-grid">
+                    <div class="calendar-weekdays">
+                        <div>Sun</div>
+                        <div>Mon</div>
+                        <div>Tue</div>
+                        <div>Wed</div>
+                        <div>Thu</div>
+                        <div>Fri</div>
+                        <div>Sat</div>
+                    </div>
+                    <div class="calendar-days" id="calendarDays">
+                        <!-- Days will be dynamically generated -->
+                    </div>
+                </div>
+
+                <div class="calendar-events">
+                    <h3>Today's Schedule</h3>
+                    <div class="events-list" id="eventsList">
+                        <!-- Events will be dynamically generated -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="add-event-modal" id="addEventModal">
+                <div class="modal-content">
+                    <span class="close-modal">&times;</span>
+                    <h2>Add Exercise to Calendar</h2>
+                    <form id="addEventForm">
+                        <div class="form-group">
+                            <label for="eventTitle">Exercise</label>
+                            <select id="eventTitle" required>
+                                <option value="">Select Exercise</option>
+                                <!-- Options will be dynamically populated -->
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="eventDate">Date</label>
+                            <input type="date" id="eventDate" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="eventTime">Time</label>
+                            <input type="time" id="eventTime" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="eventDuration">Duration (minutes)</label>
+                            <input type="number" id="eventDuration" min="5" max="180" value="30" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="eventNotes">Notes</label>
+                            <textarea id="eventNotes" rows="3"></textarea>
+                        </div>
+                        <div class="form-actions">
+                            <button type="button" class="btn-secondary" id="cancelEvent">Cancel</button>
+                            <button type="submit" class="btn-primary">Add to Calendar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="../js/calendar.js"></script>
+</body>
+</html> 

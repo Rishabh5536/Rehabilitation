@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - Rehabilitation Tracker</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <a href="dashboard.html"><i class="fas fa-heartbeat"></i> RehabTracker</a>
+        </div>
+        <div class="nav-links">
+            <a href="dashboard.html"><i class="fas fa-chart-line"></i> Dashboard</a>
+            <a href="progress.html"><i class="fas fa-chart-bar"></i> Progress</a>
+            <a href="exercises.html"><i class="fas fa-dumbbell"></i> Exercises</a>
+            <a href="calendar.html"><i class="fas fa-calendar-alt"></i> Calendar</a>
+            <a href="profile.html" class="active"><i class="fas fa-user"></i> Profile</a>
+        </div>
+        <div class="nav-profile">
+            <img src="../assets/profile-placeholder.jpg" alt="Profile" class="nav-avatar">
+            <span class="nav-username">Rishabh</span>
+        </div>
+    </nav>
+
+    <main class="profile-page">
+        <div class="profile-header">
+            <div class="profile-cover">
+                <img src="../assets/cover-placeholder.jpg" alt="Cover" class="cover-image">
+                <div class="cover-overlay"></div>
+            </div>
+            <div class="profile-avatar">
+                <img src="../assets/profile-placeholder.jpg" alt="Profile" class="avatar-image">
+                <button class="edit-avatar">
+                    <i class="fas fa-camera"></i>
+                </button>
+            </div>
+            <div class="profile-info">
+                <h1>Rishabh</h1>
+                <p class="profile-bio">Dedicated to my rehabilitation journey. Every day is a step towards better health and mobility.</p>
+                <div class="profile-tags">
+                    <span class="tag rehabilitation">Knee Rehabilitation</span>
+                    <span class="tag progress">75% Recovery</span>
+                </div>
+            </div>
+            <div class="profile-stats">
+                <div class="stat-item">
+                    <span class="stat-number">156</span>
+                    <span class="stat-label">Exercises Completed</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">7</span>
+                    <span class="stat-label">Days Streak</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">75%</span>
+                    <span class="stat-label">Overall Progress</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="profile-content">
+            <div class="info-grid">
+                <div class="info-card">
+                    <h2><i class="fas fa-user-circle"></i> Personal Information</h2>
+                    <div class="info-items">
+                        <div class="info-item">
+                            <label>Age</label>
+                            <p>20</p>
+                        </div>
+                        <div class="info-item">
+                            <label>Gender</label>
+                            <p>Male</p>
+                        </div>
+                        <div class="info-item">
+                            <label>Height</label>
+                            <p>6'0"</p>
+                        </div>
+                        <div class="info-item">
+                            <label>Weight</label>
+                            <p>76 kg</p>
+                        </div>
+                        <div class="info-item">
+                            <label>Condition</label>
+                            <p>Knee Rehabilitation</p>
+                        </div>
+                        <div class="info-item">
+                            <label>Start Date</label>
+                            <p>January 15, 2024</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <h2><i class="fas fa-notes-medical"></i> Rehabilitation Details</h2>
+                    <div class="info-items">
+                        <div class="info-item">
+                            <label>Injury Type</label>
+                            <p>ACL Tear</p>
+                        </div>
+                        <div class="info-item">
+                            <label>Treatment Plan</label>
+                            <p>Physical Therapy</p>
+                        </div>
+                        <div class="info-item">
+                            <label>Physiotherapist</label>
+                            <p>Dr. Sarah Johnson</p>
+                        </div>
+                        <div class="info-item">
+                            <label>Next Appointment</label>
+                            <p>June 10, 2024</p>
+                        </div>
+                        <div class="info-item">
+                            <label>Target Recovery</label>
+                            <p>August 2024</p>
+                        </div>
+                        <div class="info-item">
+                            <label>Emergency Contact</label>
+                            <p>+1 (555) 123-4567</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="progress-cards">
+                    <div class="progress-card">
+                        <div class="progress-header">
+                            <i class="fas fa-walking"></i>
+                            <h3>Mobility Score</h3>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 85%"></div>
+                        </div>
+                        <p class="progress-text">85/100 (85%)</p>
+                        <p class="progress-note">Improved by 15% this month</p>
+                    </div>
+
+                    <div class="progress-card">
+                        <div class="progress-header">
+                            <i class="fas fa-heartbeat"></i>
+                            <h3>Pain Level</h3>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 30%"></div>
+                        </div>
+                        <p class="progress-text">30/100 (30%)</p>
+                        <p class="progress-note">Reduced by 20% this month</p>
+                    </div>
+
+                    <div class="progress-card">
+                        <div class="progress-header">
+                            <i class="fas fa-dumbbell"></i>
+                            <h3>Strength Index</h3>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 70%"></div>
+                        </div>
+                        <p class="progress-text">70/100 (70%)</p>
+                        <p class="progress-note">Improved by 10% this month</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="achievements-section">
+                <h2><i class="fas fa-trophy"></i> Achievements</h2>
+                <div class="achievements-grid">
+                    <div class="achievement-card">
+                        <i class="fas fa-fire"></i>
+                        <h3>7 Day Streak</h3>
+                        <p>Completed exercises for 7 consecutive days</p>
+                    </div>
+                    <div class="achievement-card">
+                        <i class="fas fa-sun"></i>
+                        <h3>Early Bird</h3>
+                        <p>Completed morning exercises 5 times</p>
+                    </div>
+                    <div class="achievement-card">
+                        <i class="fas fa-star"></i>
+                        <h3>Consistency Master</h3>
+                        <p>Maintained 90% exercise completion rate</p>
+                    </div>
+                    <div class="achievement-card">
+                        <i class="fas fa-medal"></i>
+                        <h3>Pain Management</h3>
+                        <p>Reduced pain level by 50% in 2 months</p>
+                    </div>
+                    <div class="achievement-card">
+                        <i class="fas fa-running"></i>
+                        <h3>Mobility Milestone</h3>
+                        <p>Walked 1km without assistance</p>
+                    </div>
+                    <div class="achievement-card">
+                        <i class="fas fa-heart"></i>
+                        <h3>Wellness Warrior</h3>
+                        <p>Completed 100 rehabilitation exercises</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="recovery-timeline">
+                <h2><i class="fas fa-history"></i> Recovery Timeline</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">Jan 15, 2024</div>
+                        <div class="timeline-content">
+                            <h3>Rehabilitation Started</h3>
+                            <p>Began physical therapy for ACL tear recovery</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">Feb 1, 2024</div>
+                        <div class="timeline-content">
+                            <h3>First Milestone</h3>
+                            <p>Regained 30% mobility in affected knee</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">Mar 10, 2024</div>
+                        <div class="timeline-content">
+                            <h3>Pain Reduction</h3>
+                            <p>Pain level decreased from 8/10 to 5/10</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">Apr 5, 2024</div>
+                        <div class="timeline-content">
+                            <h3>Strength Improvement</h3>
+                            <p>Leg strength increased by 40%</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">May 15, 2024</div>
+                        <div class="timeline-content">
+                            <h3>Walking Milestone</h3>
+                            <p>Walked 500m without assistance</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">Jun 1, 2024</div>
+                        <div class="timeline-content">
+                            <h3>Current Status</h3>
+                            <p>75% recovered, continuing with advanced exercises</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="../js/profile.js"></script>
+</body>
+</html> 
